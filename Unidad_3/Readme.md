@@ -4,9 +4,6 @@
 
 [Readme Principal](../README.md)
 
-## Trabajos 
-[Readme Trabajos](Trabajos/Readme.md)
-
 ## RELACION EJERCICIOS 01
 [RELACIÓN DE EJERCICIOS 01 - INTRODUCCIÓN](Trabajos/RELACION%20EJERCICIOS%2001/Readme.md)
 
