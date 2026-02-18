@@ -12,8 +12,8 @@
 
 ## RELACIÓN 02 - CALCULADORA
 
-[Codigo HTML](/Trabajos/Calculadora/index.html)
+[Codigo HTML](Trabajos/Calculadora/index.html)
 
-[Codigo CSS](Calculadora/style.css)
+[Codigo CSS](Trabajos/Calculadora/style.css)
 
-[Codigo JS](Calculadora/js/javascript.js)<br>
+[Codigo JS](Trabajos/Calculadora/js/javascript.js)<br>
