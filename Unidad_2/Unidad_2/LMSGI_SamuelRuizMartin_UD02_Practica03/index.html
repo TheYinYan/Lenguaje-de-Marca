@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="estilos.css">
+    <meta name="author" content="Samuel">
+    <title>Incidencia de clase</title>
+</head>
+
+<body>
+    <header class="cabecera">
+        <img src="imagenes/IAT-LOGOTIPO.jpg" alt="">
+    </header>
+    <main class="contenido-principal">
+        <form name="registar" action="procesarincidencia.php" method="post">
+            <fieldset class="form-registro">
+                <legend>Nueva Incidencia</legend>
+                <div class="elemento-formulario">
+                    <label for="profesor">Profesor*:</label>
+                    <input type="text" name="profesor" id="profesor" placeholder="Escribe tu nombre aquí" required>
+                </div>
+                <div class="elemento-formulario">
+                    <label for="email">Correo Electronico*:</label>
+                    <input type="email" name="email" id="email" placeholder="Escribe tu correo aquí" required>
+                </div>
+                <div class="elemento-formulario">
+                    <label for="departamento">Departamento*:</label>
+                    <select name="departamento" id="departamento" required>
+                        <option disabled selected>-Seleciona Departamento-</option>
+                        <option value="informatica">Informatica</option>
+                    </select>
+                </div>
+                <div class="elemento-formulario">
+                    <label for="aula">Aula*:</label>
+                    <input type="text" name="aula" id="aula" placeholder="Indica la Incidencia" required>
+                </div>
+                <div class="elemento-formulario">
+                    <label for="dia">Dia de la Incidencia*:</label>
+                    <input type="date" name="date" id="date" required>
+                </div>
+                <div class="elemento-formulario">
+                    <label for="hora">Hora de la incidencia*:</label>
+                    <input type="time" name="hora" id="hora" required>
+                </div>
+                <div class="elemento-formulario">
+                    <label for="descripcion">Descripción de la incidencia*:</label>
+                    <textarea name="descripcion" id="descripcion"></textarea>
+                </div>
+                <div class="elemento-formulario file">
+                    <label for="file">Imagen de la incidencia (opcional):</label>
+                    <input type="file" name="archivo" id=" archivo">
+                </div>
+                <div class="elemento-formulario button">
+                    <input type="submit" value="Enviar incidencia">
+                    <input type="reset" value="Borrar formulario">
+                </div>
+            </fieldset>
+        </form>
+    </main>
+    <footer class="pie">
+        <h3>Síguenos en:</h3>
+
+        <a target="_blank" href="https://www.facebook.com/cpifpalanturing">
+            <img src="imagenes/icons8-facebook-48.png" alt="github" width="48px" height="48px">
+        </a>
+
+        <a target="_blank" href="https://x.com/cpifpalanturing?lang=es">
+            <img src="imagenes/icons8-twitter-48.png" alt="github" width="48px" height="48px">
+        </a>
+
+        <a target="_blank" href="https://www.instagram.com/cpifpalanturing/?hl=es">
+            <img src="imagenes/icons8-instagram-48.png" alt="instagram" width="48px" height="48px">
+        </a>
+        <a target="_blank" href="https://www.youtube.com/@cpifpalanturing">
+            <img src="imagenes/icons8-youtube-48.png" alt="youtube" width="48px" height="48px">
+        </a>
+
+        <a target="_blank" href="https://fpalanturing.es">
+            <img src="imagenes/icons8-website-48.png" alt="github" width="48px" height="48px">
+        </a>
+
+    </footer>
+</body>
+
+</html>

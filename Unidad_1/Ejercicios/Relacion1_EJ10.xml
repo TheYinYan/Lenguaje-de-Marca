@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<agenda xmlns:sa="http://Samuel.agenda/sa/1">
+    <contacto id="1">
+        <nombre>Juan Pérez</nombre>
+        <nacimiento>15/04/1990</nacimiento>
+        <telefono>980705624</telefono>
+        <email>JuanPerez1504@gmail.com</email>
+        <nacionalidad>Española</nacionalidad>
+        <sa:direccion>C/ Pertiga, Nº5, Malaga</sa:direccion>
+    </contacto>
+
+    <contacto id="2">
+        <nombre>María Gómez</nombre>
+        <nacimiento>22/11/1985</nacimiento>
+        <telefono>987654321</telefono>
+        <email>MariaGomez2211@gmail.com</email>
+        <nacionalidad>Española</nacionalidad>
+        <sa:direccion>C/ Locotta, Nº165, Campanillas - Malaga</sa:direccion>
+    </contacto>
+</agenda>

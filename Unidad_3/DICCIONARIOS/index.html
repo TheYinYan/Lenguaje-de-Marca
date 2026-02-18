@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Objetos clave-valor: tablas</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 16px;
+        }
+
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            margin-top: 10px;
+        }
+
+        th,
+        td {
+            border: 1px solid #ccc;
+            padding: 8px;
+            text-align: left;
+        }
+
+        th {
+            background: #f0f0f0;
+        }
+
+        .fila-seleccionada {
+            background: #fff7cc;
+        }
+
+        .bloque {
+            margin-bottom: 24px;
+        }
+
+        .info {
+            margin-top: 8px;
+            padding: 8px;
+            background: #f7f7f7;
+            border: 1px solid #ddd;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Objetos clave-valor (diccionarios) en JS</h1>
+
+    <!-- ===================== CAFETERÍA ===================== -->
+    <div class="bloque">
+        <h2>Menú de cafetería</h2>
+
+        <label>
+            Elige producto:
+            <select id="selectProducto"></select>
+        </label>
+
+        <div class="info" id="infoProducto"></div>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Clave</th>
+                    <th>Emoji</th>
+                    <th>Texto</th>
+                    <th>Precio (€)</th>
+                    <th>Alérgenos</th>
+                </tr>
+            </thead>
+            <tbody id="tablaMenu"></tbody>
+        </table>
+    </div>
+    <script src="javascript.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,109 @@
+body {
+    height: 100%;
+    min-height: 100vh;
+    font-family: Arial, sans-serif;
+    Box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    background-color: #F5A623;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+}
+
+header h1 {
+    margin: 0;
+    color: white;
+}
+
+main {
+    flex-grow: 1;
+    background-color: beige;
+    padding: 2rem;
+    justify-items: center;
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 15px;
+}
+
+.receta {
+    background-color: white;
+    color: #333;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    max-width: 800px;
+    text-align: center;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.imagen-receta img {
+    justify-content: center;
+    margin-bottom: 20px;
+    max-width: 100%;
+    border-radius: 10px;
+}
+
+.caracteristicas {
+    text-align: left;
+}
+
+.caracteristicas ul {
+    list-style: square;
+    padding-left: 20px;
+}
+
+.caracteristicas li {
+    margin-bottom: 10px;
+}
+
+.ingredientes {
+    margin-top: 0.5rem;
+}
+
+.ingredientes table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+table thead td {
+    background-color: #F5A623;
+    color: white;
+    padding: 0.75rem 1rem;
+    font-weight: bold;
+    text-align: center;
+}
+
+table tbody td {
+    padding: 0.65rem 1rem;
+
+}
+
+tr:not(:last-child) {
+    border-bottom: 1px solid #eee;
+}
+
+table tbody tr:nth-child(even) {
+    background-color: #fafafa;
+}
+
+
+h1 {
+    color: #F5A623;
+    text-align: center;
+}
+
+h2 {
+    color: #F5A623;
+}

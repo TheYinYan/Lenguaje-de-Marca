@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<catalogo xmlns:dc="http://purl.org/dc/elementos/1.1">
+    <libro isbn="1">
+        <titulo>El Quijote</titulo>
+        <dc:publisher>Anaya</dc:publisher>
+        <dc:date>1605</dc:date>
+        <dc:alternative> El ingenioso hidalgo don Quijote de la Mancha</dc:alternative>
+        <dc:audience> y lector discreto</dc:audience>
+
+    </libro>
+    <libro isbn="2">
+        <titulo>El Lazarillo de Tormes</titulo>
+        <dc:publisher>Alianza</dc:publisher>
+        <dc:date>1554</dc:date>
+        <dc:alternative> La vida de Lazarillo de Tormes y de sus fortunas y adversidades</dc:alternative>
+        <dc:audience>Adultos</dc:audience>
+    </libro>   
+    <libro isbn="3">
+        <titulo>La Celestina</titulo>
+        <dc:publisher>Alianza</dc:publisher>
+        <dc:date>1499</dc:date>
+        <dc:alternative> Tragicomedia de Calisto y Melibea</dc:alternative>
+        <dc:audience>Jovenes</dc:audience>
+    </libro>
+    <libro isbn="4">
+        <titulo>La Regenta</titulo>
+        <dc:publisher>Espasa</dc:publisher>
+        <dc:date>1884</dc:date>
+        <dc:alternative> La Regenta</dc:alternative>
+        <dc:audience>Adultos</dc:audience>
+    </libro>
+</catalogo>

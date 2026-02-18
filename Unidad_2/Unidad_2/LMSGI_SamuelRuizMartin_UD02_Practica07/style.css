@@ -1,0 +1,162 @@
+body {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    min-height: 100vh;
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #ff0000;
+    color: white;
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header h1 {
+    display: inline-flex;
+    font-size: 1.5em;
+    margin: 0;
+    justify-content: center;
+    align-items: center;
+}
+
+header img {
+    margin: 10px;
+    width: 20px;
+    height: 20px;
+}
+
+header .icono {
+    width: 40px;
+    height: auto;
+}
+
+header .busqueda,
+header button {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+}
+
+header .busqueda {
+    padding: 5px;
+    font-size: 1em;
+    width: 300px;
+    border: 1px solid #ccc;
+    border-radius: 2px;
+}
+
+header button {
+    width: 40px;
+    height: 40px;
+    background-color: white;
+    border: 1px solid #ccc;
+    border-radius: 2px;
+    transition: color 0.3s ease;
+    transition: border-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #F1F1F1;
+    border: #bbb;
+}
+
+.nav-main {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-grow: 1;
+}
+
+.navega-lateral {
+    background-color: #F1F1F1;
+    padding: 20px;
+    width: 20%;
+    box-shadow: 2px 0 5px rgba(0,0,0,0.1);
+}
+
+.navega-lateral ul{
+    list-style: none;
+    padding: 0;
+}
+
+.navega-lateral ul li{
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    padding: 10px;
+}
+
+.navega-lateral ul li:hover{
+    cursor:no-drop;
+}
+
+.icono-menu{
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+}
+
+.navega-lateral a{
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+}
+
+main {
+    flex-grow: 1;
+    padding: 20px;
+    width: 80%;
+}
+
+.video-card,
+.audio-card {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 10px;
+    margin: 10px 0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.video-card h2,
+.audio-card h2 {
+    align-items: center;
+    margin-top: 20px;
+    color: #444;
+}
+
+.video-card video,
+.audio-card audio {
+    display: block;
+    width: 100%;
+    max-width: 500px;
+    margin: 0 auto 10px;
+    border-radius: 5px;
+}
+
+footer {
+    background-color: #ff0000;
+    color: white;
+    text-align: center;
+    padding: 15px 0;
+    margin-top: 20px;
+}
+
+footer a {
+    color: white;
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}

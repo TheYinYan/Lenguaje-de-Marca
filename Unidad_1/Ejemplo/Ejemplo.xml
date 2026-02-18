@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE videoteca SYSTEM "video.dtd">
+
+<videoteca>
+    <pelicula>
+        <titulo>Arma Letal 4</titulo>
+        <director>Richard Donner</director>
+        <año>1998</año>
+    </pelicula>
+    <pelicula>
+        <titulo>Jumanji</titulo>
+        <director>Jake Kasdan</director>
+        <año>1995</año>
+    </pelicula>
+    <pelicula>
+        <titulo>Super 8</titulo>
+        <director>J.J.Abrahams</director>
+        <año></año>
+    </pelicula>
+</videoteca>
+

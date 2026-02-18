@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Raiz xmlns:html="http://www.3school.com/HTML/intro.html"
+xmlns:m="http://www.ikea.com/namespaces">
+
+  <html:table>
+    <html:tr>
+        <html:td>Platano</html:td>
+        <html:td>Manzana</html:td>
+    </html:tr>
+    <html:tr>
+        <html:td>Fresa</html:td>
+        <html:td>Sandia</html:td>
+    </html:tr>
+    </html:table>
+
+    <m:table>
+        <m:name>Mesa Aparador IKEA</m:name>
+        <m:name>Negro</m:name>
+        <m:material></m:material>Nigger</.material>
+    </m:table>  
+</Raiz>

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="estilos.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&family=Montserrat&family=Oswald&display=swap"
+        rel="stylesheet" />
+    <title>Mapas embebidos con iframe</title>
+</head>
+
+<body>
+    <header>
+        <h1>Mapas embebidos con iframe</h1>
+        <nav class="menu-navegacion">
+            <ul>
+                <li><a href="#mapa1">Nueva York</a></li>
+                <li><a href="#mapa2">Los Ángeles</a></li>
+                <li><a href="#mapa3">Londres</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div class="contenedor-mapas">
+            <div class="map-card" id="mapa1">
+
+                <h2>
+                    Nueva York <img src="imagenes/nueva_york.png" alt="nueva_york">
+                </h2>
+
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d387193.06193332904!2d-74.30984919445197!3d40.69719140147665!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c24fa5d33f083b%3A0xc80b8f06e177fe62!2sNueva%20York%2C%20EE.%20UU.!5e0!3m2!1ses!2ses!4v1765189943656!5m2!1ses!2ses"
+                    width="600" height="450" style="border: 0" allowfullscreen="" loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade" class="mapa">
+                </iframe>
+
+                <p class="descripcion">
+                    Nueva York es la ciudad más poblada de Estados Unidos, famosa por su
+                    Estatua de la Libertad y Times Square.
+                </p>
+            </div>
+
+            <div class="map-card" id="mapa2">
+                <h2>
+                    Los Ángeles <img src="imagenes/los_angeles.png" alt="los_angeles">
+                </h2>
+
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d423284.0536004084!2d-118.74208207053708!3d34.02060656412946!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80c2c75ddc27da13%3A0xe22fdf6f254608f4!2sLos%20%C3%81ngeles%2C%20California%2C%20EE.%20UU.!5e0!3m2!1ses!2ses!4v1765190125292!5m2!1ses!2ses"
+                    width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade" class="mapa">
+                </iframe>
+
+                <p class="descripcion">
+                    Los Ángeles es conocida por ser el centro de la industria
+                    cinematográfica de los Estados Unidos, hogar de Hollywood.
+                </p>
+            </div>
+
+            <div class="map-card" id="mapa3">
+                <h2>
+                    Londres <img src="imagenes/londres.png" alt="londres">
+                </h2>
+
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d317716.61988577514!2d-0.4319297311236616!3d51.52860508811384!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47d8a00baf21de75%3A0x52963a5addd52a99!2sLondres%2C%20Reino%20Unido!5e0!3m2!1ses!2ses!4v1765190037093!5m2!1ses!2ses"
+                    width="600" height="450" style="border: 0" allowfullscreen="" loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade" class="mapa">
+                </iframe>
+
+                <p class="descripcion">
+                    Londres, capital de Reino Unido, es famosa por lugares icónicos como
+                    el Big Ben y el Palacio de Buckingham.
+                </p>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>
+            &copy; 2025 - Ejercicios de mapas embebidos - Desarollado en HTML5 y
+            CSS3
+        </p>
+    </footer>
+</body>
+
+</html>

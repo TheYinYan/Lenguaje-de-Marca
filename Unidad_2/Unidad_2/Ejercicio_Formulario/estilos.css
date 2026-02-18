@@ -1,0 +1,514 @@
+* {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    font-family: "Orbitron", system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    color: #333;
+    background: #f0f0f0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.cabecera {
+    padding: 1rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background: #2C3E50;
+}
+
+/* .titulo {
+    margin: 0;
+    color:yellow;
+} */
+.logo {
+    height: 100px;
+    width: auto;
+}
+
+.menu {
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+    margin: 0;
+    padding: 0;
+}
+
+.menu a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+}
+
+.menu a:hover {
+    color: #E74C3C;
+}
+
+.menu .activo {
+    color: #E74C3C;
+    border-bottom: 2px solid #E74C3C;
+    padding-bottom: 0.2rem;
+}
+
+.contenido-principal {
+    padding: 1rem;
+    flex-grow: 1;
+}
+
+.tarjeta {
+    background: #fff;
+    border-radius: 10px;
+    width: min(900px, 95%);
+    margin: 1.5rem auto;
+    padding: 1.5rem;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    border: 1px solid #ddd;
+}
+
+.listas {
+    display: flex;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+.lista {
+    padding-left: 20px;
+}
+
+.lista li {
+    margin: 0.25rem 0;
+}
+
+.tabla {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1rem;
+}
+
+.tabla td,
+.tabla th {
+    border: 1px solid #ddd;
+    padding: 10px;
+}
+
+.tabla th {
+    background: #2C3E50;
+    color: #fff;
+    text-align: center;
+}
+
+.table td {
+    text-align: left;
+    white-space: nowrap;
+}
+
+.pie {
+    text-align: center;
+    padding: 1rem;
+    color: #7f8c8d;
+    font-size: 14px;
+    background: #2C3E50;
+}
+
+/* Formulario de registro */
+
+.form-registro {
+    background-color: #fff;
+    border: 4px solid cyan;
+    border-radius: 7px;
+    padding: 1rem;
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    color: darkcyan;
+    margin: 0 auto;
+}
+
+.form-row {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    margin: 1rem;
+}
+
+.form-row label {
+    font-weight: bold;
+}
+
+.form-row label {
+    padding: 0.5rem;
+}
+
+.form-row input[type="submit"],
+.form-row input[type="reset"] {
+    background-color: #2C3E50;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+}
+
+.form-row input[type="submit"]:hover,
+.form-row input[type="reset"]:hover {
+    background-color: #502c42;
+}
+
+/* Contacto */
+
+.box-info {
+    width: 60%;
+    margin-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 2px;
+    background-color: transparent;
+    color: white;
+}
+
+tr {
+    text-align: center;
+}
+
+table {
+    margin: auto;
+}
+
+/* Tienda */
+
+.tarjeta.tienda {
+    width: min(1200px, 95%);
+}
+
+.lista-cards--flex {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    justify-content: center;
+}
+
+.card-tienda {
+    width: 370px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+    text-align: center;
+    padding: 12px;
+}
+
+.card {
+    width: 100%;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+    text-align: center;
+    padding: 12px;
+}
+
+.card-imagen {
+    width: 100%;
+    height: 180px;
+    object-fit: contain;
+    background-color: #f4f4f4;
+    border-radius: 8px;
+    margin-top: 8px;
+}
+
+.card-titulo {
+    font-size: 1.1rem;
+    color: #333;
+    margin: 8px 0 4px;
+}
+
+.card-descripcion {
+    font-size: 0.9rem;
+    color: #666;
+    min-height: 8.5em;
+    text-align: center;
+}
+
+.card-precio {
+    color: #b60000;
+    font-weight: bold;
+    margin: 8px 0;
+}
+
+.card-boton {
+    display: inline-block;
+    padding: 10px 16px;
+    background-color: #2C3E50;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 8px;
+}
+
+.card-boton:hover {
+    background-color: #502c42;
+}
+
+.parent {
+    height: 700px;
+    display: grid;
+    /* Primero los rows y luego column */
+    grid-template: 100px 1fr 60px / 200px 2fr 1fr;
+    gap: 10px;
+    grid-template-areas:
+        "header header  header"
+        "nav    main    aside"
+        "footer footer  footer"
+}
+
+.area-header {
+    background-color: blue;
+    grid-area: header;
+}
+
+.area-nav {
+    background-color: aqua;
+    grid-area: nav;
+}
+
+.area-main {
+    background-color: green;
+    grid-area: main;
+}
+
+.area-aside {
+    background-color: red;
+    grid-area: aside;
+}
+
+.area-footer {
+    background-color: orange;
+    grid-area: footer;
+}
+
+
+.contenedor-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 150px);
+    grid-template-rows: repeat(4, 100px);
+    /* grid-template: 100px 100px / 200px 200px 200px;  Atajo de lo de ariba */
+    gap: 10px;
+    background-color: #aeaeae;
+    padding: 10px;
+
+    /* Alinecacio de cada celda */
+    justify-items: stretch;
+    align-items: stretch;
+
+    /* Horizontal
+    justify-content: center;
+    /* Vertical */
+    /* align-content: center; */
+}
+
+.item-grid {
+    background-color: goldenrod;
+}
+
+.item-3 {
+    background-color: purple;
+    justify-self: center;
+    align-self: center;
+    order: -1;
+}
+
+.item-1 {
+    order: 1;
+}
+
+/* Juegos */
+
+.tarjeta.juego {
+    width: min(1200px, 95%);
+}
+
+.lista-cards--grid {
+    display: grid;
+    grid-template-columns: minmax(200px, 1fr);
+    /* grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); */
+    /* grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); */
+    gap: 16px;
+}
+
+.card-destacada {
+    /* grid-column: span 2; */
+    background: #52889e;
+    border: 2px solid rgb(190, 180, 63);
+    border-radius: 10px;
+}
+
+.guias h1 {
+    margin-top: 0;
+}
+
+.guias-videos {
+    margin-top: 2rem;
+}
+
+.guias-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 1.5rem;
+}
+
+.guia-video h3 {
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+}
+
+.guia-video iframe {
+    width: 100%;
+    aspect-ratio: 13/9;
+    border: 0;
+    border-radius: 8px;
+}
+
+.contacto-ubucacion {
+    margin-top: 2rem;
+}
+
+.mapa-contenedor {
+    margin-top: 1rem;
+}
+
+.mapa-contenedor iframe {
+    width: 100%;
+    max-width: 600px;
+    height: 350px;
+    border: 0;
+    border-radius: 8px;
+    display: block;
+    margin: 0 auto;
+}
+
+/* =========================
+   TARJETAS DE VÍDEO Y AUDIO
+   ========================= */
+.video-card,
+.audio-card {
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 10px;
+    margin-top: 10px;
+    /* superior 10px */
+    margin-bottom: 0;
+    /* inferior 0 */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.video-card h2,
+.audio-card h2 {
+    text-align: center;
+    margin-top: 20px;
+    color: #444;
+}
+
+/* Vídeos y audios */
+video,
+audio {
+    display: block;
+    width: 100%;
+    max-width: 500px;
+    margin: 0 auto 10px auto;
+    /* centrado, margen inferior 10px */
+    border-radius: 5px;
+}
+
+/* Iframe del vídeo de YouTube */
+.video-card iframe {
+    display: block;
+    width: 560px;
+    height: 315px;
+    max-width: 100%;
+    margin: 0 auto 10px auto;
+    border-radius: 5px;
+}
+
+/* ===== Layout especial para la página de Guías ===== */
+
+/* Contenedor principal: menú lateral + contenido en fila */
+.layout-guias .layout-guias-contenido {
+    display: flex;
+    flex: 1;
+    min-height: 100vh;
+}
+
+/* Menú lateral */
+.layout-guias .navega-lateral {
+    background: #34495E;
+    padding: 1rem 0.5rem;
+    min-width: 220px;
+}
+
+/* Menú en columna solo en la página de Guías */
+.layout-guias .navega-lateral .menu {
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+/* Enlaces del menú lateral ocupan todo el ancho */
+.layout-guias .navega-lateral .menu a {
+    display: block;
+    padding: 0.4rem 0.8rem;
+    border-radius: 4px;
+}
+
+.layout-guias .navega-lateral .menu a:hover {
+    background: #2C3E50;
+    color: #E74C3C;
+}
+
+/* El main se expande para ocupar el resto del espacio */
+.layout-guias #contenido-principal {
+    flex: 1;
+    padding: 1.5rem;
+}
+
+/* Media queri para otro dispositivos */
+@media (768px <=width) and (width < 1024px) {
+    .tarjeta.tarjeta.juego {
+        width: min(1000px, 95%);
+    }
+
+    .lista-cards--grid {
+        grid-template-columns: repeat(2, minmax(220px, 1fr));
+    }
+
+    #contenido-principal {
+        padding-inline: 1.5rem;
+    }
+
+    .card-destacada {
+        grid-column: span 2;
+    }
+}
+
+@media (width >=1024px) {
+    .tarjeta.tarjeta.juego {
+        width: min(1200px, 95%);
+    }
+
+    .lista-cards--grid {
+        grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    }
+
+    #contenido-principal {
+        padding-inline: 2rem;
+    }
+
+    .card-destacada {
+        grid-column: span 2;
+    }
+}

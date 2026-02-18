@@ -1,0 +1,22 @@
+/* Ejercicio 01 */
+.EJ01{
+    color: orange;
+    font-size: 20px;
+}
+
+/* Ejercicio 02 */
+.suma{
+    color: green;
+}
+
+.resta{
+    color: red;
+}
+
+.division{
+   font-weight: bold; 
+}
+
+.resto{
+    text-decoration: underline;
+}

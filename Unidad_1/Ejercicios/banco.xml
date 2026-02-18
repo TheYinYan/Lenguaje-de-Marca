@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE banco SYSTEM "info.dtd">
+<banco>
+    <sucursal codigo="S01">
+        <cuenta codigo="C01">
+            <cliente DNI="77890881W">
+                <nombre>Pepe</nombre>
+                <apellidos>Ruiz Martin</apellidos>
+                <telefono>693487596</telefono>
+                <nacimiento>24/12/2007</nacimiento>
+                <email>peperuizmartin2412@gmail.com</email>
+                <nacionalidad>Española</nacionalidad>
+            </cliente>
+
+            <cliente DNI="88782773X">
+                <nombre>Samuel</nombre>
+                <apellidos>Castillo Flores</apellidos>
+                <telefono>690066756</telefono>
+                <nacimiento>11/11/2006</nacimiento>
+                <email>samuelcastilloflores1111206@gmail.com</email>
+                <nacionalidad>Española</nacionalidad>
+            </cliente>
+        </cuenta>
+
+        <cuenta codigo="C02">
+            <cliente DNI="77965579H">
+                <nombre>Ana</nombre>
+                <apellidos>López García</apellidos>
+                <telefono>+34 678 901 234</telefono>
+                <nacimiento>1985/11/12</nacimiento>
+                <email>ana.lopez@example.com</email>
+                <nacionalidad>Española</nacionalidad>
+            </cliente>
+        </cuenta>
+    </sucursal>
+
+    <sucursal codigo="S02">
+        <cuenta codigo="C01">
+            <cliente DNI="12345678A">
+                <nombre>Laura</nombre>
+                <apellidos>Pérez Sánchez</apellidos>
+                <telefono>+34 612 345 678</telefono>
+                <nacimiento>1992/07/15</nacimiento>
+                <email>laura.perez@example.com</email>
+                <nacionalidad>Española</nacionalidad>
+            </cliente>
+
+            <cliente DNI="87654321B">
+                <nombre>Carlos</nombre>
+                <apellidos>Gómez Ruiz</apellidos>
+                <telefono>+34 699 854 321</telefono>
+                <nacimiento>1988/03/09</nacimiento>
+                <email>carlos.gomez@example.com</email>
+                <nacionalidad>Española</nacionalidad>
+            </cliente>
+        </cuenta>
+
+        <cuenta codigo="C02">
+            <cliente DNI="45678912C">
+                <nombre>María</nombre>
+                <apellidos>Fernández López</apellidos>
+                <telefono>+34 677 112 890</telefono>
+                <nacimiento>1995/12/22</nacimiento>
+                <email>maria.fernandez@example.com</email>
+                <nacionalidad>Española</nacionalidad>
+            </cliente>
+        </cuenta>
+    </sucursal>
+</banco>

@@ -1,0 +1,143 @@
+@font-face {
+    font-family: "Segment7Standard";
+    src: url("./fonts/Segment7Standard.otf") format("truetype");
+    font-weight: 400;
+    font-style: italic;
+    font-display: swap;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    min-height: 100vh;
+    background-color: #f0fff0;
+    align-items: center;
+}
+
+header h1 {
+    font-family: 'Segment7Standard', monospace;
+    text-transform: uppercase;
+    font-size: 2.2rem;
+    font-weight: 900;
+    letter-spacing: 2px;
+    padding: 1rem;
+}
+
+main {
+    flex-grow: 1;
+}
+
+footer {
+    font-family: 'Arial', sans-serif;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    font-weight: 400;
+    letter-spacing: 2px;
+    background-color: #f0fff0;
+    color: #3d6b5d;
+}
+
+.nombre {
+    font-size: 0.7rem;
+    letter-spacing: 1px;
+}
+
+.calculadora {
+    background-color: #1f1f1f;
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+    width: 320px;
+}
+
+.panel {
+    font-family: 'Segment7Standard', monospace;
+    font-size: 2.5rem;
+    color: white;
+    background-color: #000;
+    padding: 15px;
+    border-radius: 15px;
+    height: 70px;
+    margin-bottom: 20px;
+    text-align: right;
+}
+
+.botonera {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+}
+
+.doble {
+  grid-column: span 2;
+}
+
+.boton {
+    background-color: #2d2d2d;
+    color: #fff;
+    font-size: 1.3rem;
+    padding: 18px;
+    border: 0;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.boton:hover, .igual:hover {
+    background-color: #3a3a3a;
+}
+
+.inmediatas,
+.control {
+    background-color: #3b3b3b;
+}
+
+.operador {
+    background-color: #4b4bff;
+}
+
+.deshabilitado{
+    opacity: 0.4;
+    cursor: not-allowed;
+}
+
+/* Colores del texto para cada operación  */
+.color-normal{
+    color: white;
+}
+
+.color-error {
+    color: red;
+}
+
+.color-suma {
+    color: #4bff4b;
+}
+
+.color-resta{
+    color: #ff884b;
+}
+
+.color-multiplica {
+    color: #ffbf00;
+}
+
+.color-divide {
+    color: #00c8ff;
+}
+
+.color-inverso {
+    color: #b084ff;
+}
+
+.color-cuadrado {
+    color: #ff4bd8;
+}
+
+.color-Raizcuadrada {
+    color: #00ffbf;
+}
+
+.igual{
+    background-color:  #ff9500;
+}

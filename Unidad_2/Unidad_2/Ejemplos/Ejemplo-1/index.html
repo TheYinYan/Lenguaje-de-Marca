@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="Descripción" content="Pagina de Videojuegos">
+    <link rel="stylesheet" href="estilos.css">
+    <title>GameZone</title>
+</head>
+
+<body>
+    <header class="cabecera">
+        <div class="brand">
+            <img class="logo" src="imagenes/gamezone-logo.png" alt="Logo de GameZone">
+            <!-- <h1 class="titulo">GameZone</h1> -->
+        </div>
+
+        <nav class="navegacion">
+            <ul class="menu">
+                <li><a href="#">Inicio</a></li>
+                <li><a href="#">Noticia</a></li>
+                <li><a href="#">Guías</a></li>
+                <li><a href="#">Contactos</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main id="contenido-principal">
+
+        <section class="intro tarjeta">
+            <h2>Bienvenid@ a GameZone</h2>
+            <p>Portal de ejemplo para practicar HTML y CSS.</p>
+        </section>
+
+        <section class="listas-y-tabla tarjeta">
+            <h2>Guia Rapida</h2>
+            <div class="listas">
+                <div>
+                    <h3>Carasteristicas</h3>
+                    <ul class="lista">
+                        <li>Análisis Semanales</li>
+                        <li>Guías paso a paso</li>
+                        <li>Comunidad activa</li>
+                    </ul>
+                </div>
+                <div>
+                    <h3>Primeros pasos</h3>
+                    <ol class="lista">
+                        <li>Elige tu objeto favorito</li>
+                        <li>Esplora la galería</li>
+                        <li>Lee las guías</li>
+                        <li>Comparte tu opinión</li>
+                    </ol>
+                </div>
+            </div>
+
+            <h3>Top Ventas</h3>
+            <table class="tabla">
+                <thead>
+                    <tr>
+                        <th>Juego</th>
+                        <th>Plataforma</th>
+                        <th>Unidades</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Racing Challenge</td>
+                        <td>PC</td>
+                        <td>120</td>
+                    </tr>
+                    <tr>
+                        <td>Magic Realms</td>
+                        <td>PS</td>
+                        <td>95</td>
+                    </tr>
+                    <tr>
+                        <td>City Builder</td>
+                        <td>Switch</td>
+                        <td>81</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+        <section class="tarjeta">
+            <form name="buscar" action="buscar.html" method="get">
+                <label for="busqueda">Buscar Juego:</label>
+                <input type="search" name="busqueda" id="busqueda" placeholder="Escribe título" required>
+                <button type="submit">Buscar</button>
+            </form>
+        </section>
+        <section class="tarjeta">
+            <h2>Reguitro de usuario</h2>
+            <form name="reguiter" action="registro.html" method="post">
+                <!-- Campo texto -->
+                <label for="nombre">Nombre:</label>
+                <input type="text" name="name" id="nombre" required>
+
+                <!-- Campo password -->
+                <label for="clave">Contraseña:</label>
+                <input type="password" name="pass" id="clave" minlength="6" maxlength="12" required>
+
+                <!-- Campo número -->
+                <label for="edad">Edad:</label>
+                <input type="number" name="age" id="edad" min="0">
+
+                <!-- Campo DNI  -->
+                <br>
+                <label for="dni">DNI/NIE: </label>                
+                <input type="text" name="id" id="dni" pattern="([X-Zx-z]|[0-9])[0-9]{7}[A-Za-z]" required>
+                <button type="submit">Registrar</button>
+            </form>
+        </section>
+        <section class="tarjeta">
+            <form name="contacto" action="contacto.php" method="post" autocomplete="off">
+                <label for="categoria">Categoria de juego:</label>
+                <select name="categoria" id="categoria">
+                    <option disabled selected>-Seleciona Categoria-</option>
+                    <option value="rol">Rol</option>
+                    <option value="aventura">Aventura</option>
+                    <option value="deportes">Deportes</option>
+                </select>
+
+                <p>Plataforma</p>
+                <label><input type="radio" name="plataforma" value="pc" required>PC</label>
+                <label><input type="radio" name="plataforma" value="ps5">PS5</label>
+
+                <p>Subscribirse a noticias:</p>
+                <label><input type="checkbox" name="plataforma" checked>Si</label>
+
+                <!-- El hidden se utiliza para enviar datos no visible al usuario -->
+                <input type="hidden" name="pruducto-id" value="1234">
+                <br><br>
+                <label for="mensaje">Deja aqui tu mensaje</label><br>
+                <textarea name="mensaje" id="mensaje" cols="30" rows="10"></textarea>
+                <input type="submit" value="Contactar">
+                <input type="reset" value="Limpiar formulario">
+            </form>
+        </section>
+    </main>
+
+    <footer class="pie">
+        <p>&copy; 2025 Todos los derechos reservado</p>
+    </footer>
+
+</body>
+
+</html>
