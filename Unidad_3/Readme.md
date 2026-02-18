@@ -1,5 +1,9 @@
 # UNIDAD 3 - INTRODUCCIÓN A JAVASCRIPT
 
+![Imagen](Imagenes/javaScript.png)
+
+[Readme Principal](../README.md)
+
 ## Trabajos 
 [Readme Trabajos](Trabajos/Readme.md)
 
