@@ -14,25 +14,7 @@ const botonDecimal = document.querySelector("#decimal");
 const borrarEntradas = document.querySelector("#Borrar-entrada");
 const borrarTodos = document.querySelector("#Borrar-todo");
 const eliminar = document.querySelector("#eliminar");
-
-// Metodo forEach() [Arrays]
-botonesNumeros.forEach(boton => {
-    boton.addEventListener("click", () => {
-        mostrarNumeroPantalla(boton.textContent);
-    });
-});
-
-botonesOperador.forEach(boton => {
-    boton.addEventListener("click", () => {
-        manejarOperador(boton.textContent);
-    });
-});
-
-eliminar.addEventListener("click", retroceder)
-borrarTodos.addEventListener("click", borrarTodo);
-borrarEntradas.addEventListener("click", borrarEntrada);
-botonDecimal.addEventListener("click", mostrarPuntoPantalla)
-botonIgual.addEventListener("click", calcularOperacion);
+const inmediatas = [...document.querySelectorAll(".inmediatas")];
 
 /**
  * @brief Ejecuta la inicialización de la calculadora una vez que el DOM está completamente cargado.
@@ -40,7 +22,31 @@ botonIgual.addEventListener("click", calcularOperacion);
  * Esta función prepara todo lo necesario para que la calculadora funciones, incluyendo la configuración de la interfaz, los valores iniciales de las variables necesarias y la vinculación de eventos a los controles.
  *
  */
-document.addEventListener('DOMContentLoaded', () => {
+document.addEventListener('DOMContentLoaded', () => {// Metodo forEach() [Arrays]
+    botonesNumeros.forEach(boton => {
+        boton.addEventListener("click", () => {
+            mostrarNumeroPantalla(boton.textContent);
+        });
+    });
+
+    botonesOperador.forEach(boton => {
+        boton.addEventListener("click", () => {
+            manejarOperador(boton.textContent);
+        });
+    });
+
+    inmediatas.forEach(boton => {
+        boton.addEventListener("click", () => {
+            operacionInmediata(boton.textContent);
+        });
+    });
+
+    eliminar.addEventListener("click", retroceder)
+    borrarTodos.addEventListener("click", borrarTodo);
+    borrarEntradas.addEventListener("click", borrarEntrada);
+    botonDecimal.addEventListener("click", mostrarPuntoPantalla);
+    botonIgual.addEventListener("click", calcularOperacion);
+
 });
 
 /**
@@ -85,6 +91,9 @@ function actualizarPantalla() {
     }
     if (!String(valorAct).includes(".")) {
         habilitarPunto();
+    }
+    else{
+        deshabilitarPunto()
     }
     pantalla.textContent = valorAct;
 }
@@ -262,7 +271,38 @@ function retroceder() {
  *
  */
 function operacionInmediata(operacion) {
+    let num = parseFloat(valorAct);
+    let resultado;
 
+    switch (operacion) {
+        case "1/x": case "i":
+            if (num === 0) {
+                valorAct = "Error"
+                // Poner a Rojo
+                pantalla.classList.replace("color-normal", "color-error");
+                actualizarPantalla();
+                return;
+            }
+            resultado = 1 / num;
+            break;
+        case "x²": case "s":
+            resultado = Math.pow(num, 2);
+            break;
+        case "√": case "r":
+            if (num < 0) {
+                valorAct = "Error"
+                // Poner a Rojo
+                pantalla.classList.replace("color-normal", "color-error");
+                actualizarPantalla();
+                return;
+            }
+            resultado = Math.sqrt(num);
+            break;
+    }
+    valorAct = resultado.toString();
+    aplicarColorResultado(operacion);
+    actualizarPantalla();
+    resultadoMostrado = true;
 }
 
 /**
@@ -288,6 +328,15 @@ function aplicarColorResultado(operador) {
         case "/":
             pantalla.classList.replace("color-normal", "color-divide");
             break;
+        case "1/x": case "i":
+            pantalla.classList.replace("color-normal", "color-inverso");
+            break;
+        case "x²": case "s":
+            pantalla.classList.replace("color-normal", "color-cuadrado");
+            break;
+        case "√": case "r":
+            pantalla.classList.replace("color-normal", "color-Raizcuadrada");
+            break;
     }
 }
 
@@ -310,4 +359,26 @@ function aplicarColorResultado(operador) {
  */
 
 window.addEventListener('keydown', (teclaevento) => {
+    switch (teclaevento.key.toLowerCase()) {
+        case '1': case '2': case '3': case '4': case '5': case '6': case '7': case '8': case '9': case '0':
+            mostrarNumeroPantalla(teclaevento.key);
+            break;
+        case '.':
+            mostrarPuntoPantalla();
+            break;
+        case '+': case '-': case '*': case '/':
+            manejarOperador(teclaevento.key);
+            break;
+        case '=':case 'enter':
+            calcularOperacion();
+            break;
+        case 'backspace':
+            retroceder();
+            break;
+        case 'C': case 'c':
+            borrarTodo();
+            break;
+        case 'i': case 's': case 'r':
+            operacionInmediata(teclaevento.key);
+    }
 });

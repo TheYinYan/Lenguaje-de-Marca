@@ -1,0 +1,583 @@
+/* Variables CSS para consistencia */
+:root {
+  --primary-color: #6c63ff;
+  --secondary-color: #ff6584;
+  --accent-color: #36d1dc;
+  --dark-bg: #1a1a2e;
+  --darker-bg: #16213e;
+  --card-bg: #0f3460;
+  --text-light: #ffffff;
+  --text-dim: #b8b8d1;
+  --success: #4ecdc4;
+  --danger: #ff6b6b;
+  --warning: #ffd166;
+  --border-radius: 16px;
+  --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/*****************************************/
+/* Estilos comunes a todos los elementos */
+/*****************************************/
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/***************************************/
+/* Estilos para el cuerpo de la página */
+/***************************************/
+
+body {
+  min-height: 100vh; /* Asegura que la altura mínima de la página sea la del viewport (pantalla) */
+  box-sizing: border-box; /* Asegura que el padding y los bordes no aumenten el ancho/alto total del elemento */
+  display: flex; /* Flexbox para centrar elementos */
+  flex-direction: column; /* Disposición vertical */
+  align-items: center; /* Alineación centrada horizontal */
+  justify-content: center; /* Alineación centrada vertical */
+
+  font-family: "Roboto", sans-serif;
+  background: linear-gradient(135deg, var(--dark-bg) 0%, var(--darker-bg) 100%);
+  color: var(--text-light);
+}
+
+/*************************************************/
+/* Estilos para el contenido principal del juego */
+/*************************************************/
+
+main {
+  /* Aquí defino que el main tenga una transición o efecto de opacidad */
+  opacity: 1;
+  transition: opacity 0.25s ease-in-out;
+
+  flex: 1; /* Hace que el contenido de la etiqueta main crezca para llenar el espacio disponible ¡¡¡IMPORTANTE!!!*/
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Centra horizontalmente */
+  justify-content: center; /* Centra verticalmente */
+  gap: 1.5rem; /* Separación entre los elementos del main */
+  width: 100%;
+  max-width: 1200px;
+}
+
+/**************************/
+/* Estilos de la cabecera */
+/**************************/
+
+header {
+  text-align: center;
+  padding: 1rem;
+}
+
+.titulo-juego {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 2.2rem;
+  font-weight: 900; /* Negrita muy fuerte (Black / Heavy) */
+  background: linear-gradient(
+    135deg,
+    var(--primary-color),
+    var(--accent-color)
+  );
+  -webkit-background-clip: text; /* Indica que el fondo del elemento se recorta usando la forma del texto. Esta propiedad funciona principalmente en navegadores basados en WebKit/Chromium (Chrome, Edge, Safari). */
+  -webkit-text-fill-color: transparent; /* Hace que el relleno del texto sea transparente, permitiendo que se vea el fondo que quedó recortado por la propiedad anterior. */
+  background-clip: text; /* Hace que el fondo del elemento se recorte con la forma del texto. */
+  margin-bottom: 0.5rem;
+  text-transform: uppercase;
+  letter-spacing: 2px; /* Separación horizontal entre letras */
+}
+
+.subtitulo-juego {
+  color: var(--text-dim);
+  font-size: 1rem;
+  font-weight: bold;
+  letter-spacing: 3px; /* Separación horizontal entre letras */
+}
+
+/*********************************/
+/* Estilos para el pie de página */
+/*********************************/
+
+footer {
+  text-align: center;
+  padding: 2rem;
+  color: var(--text-dim);
+  font-size: 0.8rem;
+  font-weight: 300;
+  letter-spacing: 3px; /* Separación horizontal entre letras */
+}
+
+/************************************************************/
+/* Estilos de los elementos del contenedor del juego (main) */
+/************************************************************/
+
+/* Estilos de los paneles de arriba: Elige tu jugada y Batalla */
+/* Se agrega .paneles-abajo como contenido optativo */
+.paneles-arriba,
+.paneles-abajo {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+  width: 100%;
+  max-width: 900px;
+  align-items: start;
+}
+
+/* Estilos del panel de la selección de jugada del jugador */
+.panel-seleccion-jugada {
+  background: var(--card-bg);
+  padding: 1.5rem;
+  border-radius: var(--border-radius);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  height: 100%;
+}
+
+.panel-seleccion-jugada h2 {
+  text-align: center;
+  margin-bottom: 1.5rem;
+  color: var(--text-light);
+  font-weight: 500; /* Negrita media */
+  font-size: 1.3rem;
+}
+
+/* Estilos del panel donde están las posibles elecciones del juego (Piedra, Papel, Tijera, Lagarto, Spock) */
+.contenedor-elecciones-juego {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.8rem;
+}
+
+/* Botón para seleccionar una posible jugada (Piedra, Papel, Tijera, Lagarto, Spock) */
+.boton-eleccion-jugada {
+  background: linear-gradient(135deg, var(--darker-bg), var(--card-bg));
+  border: 2px solid transparent;
+  border-radius: var(--border-radius);
+  padding: 1.2rem 0.8rem;
+  color: var(--text-light);
+  cursor: pointer;
+  transition: var(--transition);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  font-family: "Roboto", sans-serif;
+  font-size: 0.9rem;
+  min-height: 100px;
+}
+
+/* Efecto del botón de seleccionar jugada al pasar el ratón por encima */
+.boton-eleccion-jugada:hover {
+  transform: translateY(-3px);
+  border-color: var(--primary-color);
+  box-shadow: 0 8px 20px rgba(108, 99, 255, 0.3);
+}
+
+/* Estilo para que cuando el botón está siendo presionado, muévelo 1px hacia arriba */
+/* :active Es un pseudoestado que se activa solo mientras el usuario mantiene el clic presionado (o el toque en móvil). */
+.boton-eleccion-jugada:active {
+  transform: translateY(-1px);
+}
+
+/* Estilos de los iconos de piedra, papel, tijera, lagarto, Spock */
+.icono-jugada {
+  font-size: 2rem;
+  transition: var(--transition);
+}
+
+/* Estilo para que escale el botón de elección jugada al pasar el ratón por encima y además el icono de la jugada */
+.boton-eleccion-jugada:hover .icono-jugada {
+  transform: scale(1.1);
+}
+
+/*************************************/
+/* Estilos del panel de la "batalla" */
+/*************************************/
+
+.panel-batalla {
+  background: var(--card-bg);
+  padding: 1.5rem;
+  border-radius: var(--border-radius);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  height: 100%;
+}
+
+.panel-batalla h2 {
+  text-align: center;
+  margin-bottom: 1.5rem;
+  color: var(--text-light);
+  font-weight: 500; /* Negrita media */
+  font-size: 1.3rem;
+}
+
+.contenedor-jugadores {
+  display: flex;
+  justify-content: space-between; /* Separa los elementos uno a la izquierda, otro a la derecha, y si hay más, los separa uniformemente */
+  align-items: center; /* Centra horizontalmente */
+  justify-content: center; /* Centra verticalmente */
+  gap: 1rem;
+}
+
+.jugador {
+  flex: 1; /* Ocupa todo el espacio disponible */
+  text-align: center;
+}
+
+/* Estilo de la etiqueta del jugador, tanto el jugador como la CPU */
+.etiqueta-jugador {
+  font-size: 1rem;
+  font-weight: 500;
+  margin-bottom: 0.8rem;
+  color: var(--text-dim);
+  text-transform: uppercase;
+  letter-spacing: 1px; /* Separación horizontal entre letras */
+}
+
+.mostrar-jugada {
+  background: var(--darker-bg);
+  border-radius: var(--border-radius);
+  padding: 1.5rem;
+  min-height: 120px;
+  display: flex;
+  align-items: center; /* Centra horizontalmente */
+  justify-content: center; /* Centra verticalmente */
+  border: 2px dashed rgba(255, 255, 255, 0.1);
+  transition: var(--transition);
+}
+
+/* Estilo para cuando se muestra la jugada (Se activa desde JS en el método mostrarEleccion) */
+.mostrar-jugada.active {
+  border-color: var(--primary-color);
+  background: linear-gradient(135deg, var(--card-bg), rgba(108, 99, 255, 0.1));
+}
+
+/* Estilo para mostrar la jugada cuando todavía no se ha hecho ninguna jugada */
+.placeholder {
+  font-size: 2.5rem;
+  color: var(--text-dim);
+  opacity: 0.5;
+}
+
+/*************************/
+/* Estilos del div de VS */
+/*************************/
+
+.vs-circle {
+  width: 60px;
+  height: 60px;
+  background: linear-gradient(
+    135deg,
+    var(--primary-color),
+    var(--secondary-color)
+  );
+  border-radius: 50%;
+  display: flex; /* Centro horizotal y verticalmente el texto del div */
+  align-items: center; /* Centra horizontalmente */
+  justify-content: center; /* Centra verticalmente */
+  font-family: "Orbitron", sans-serif;
+  font-weight: bold;
+  font-size: 1rem;
+  box-shadow: 0 5px 15px rgba(108, 99, 255, 0.4);
+  animation: pulse 2s infinite; /* Defino que el elemento tenga la animación pulse, cada 2 segundos y que se repita indefinidamente */
+  flex-shrink: 0; /* Evita que un elemento flex se encoja cuando falta espacio en el contenedor. El elemento no se reducirá bajo ningún motivo, mantendrá su ancho/alto aunque genere overflow. */
+}
+
+/***********************************/
+/* Estilos del panel de resultados */
+/***********************************/
+
+.contenedor-resultado {
+  background: var(--card-bg);
+  padding: 1.5rem;
+  border-radius: var(--border-radius);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  width: 100%;
+  height: 100%;
+  max-width: 700px;
+}
+
+.resultados {
+  text-align: center;
+}
+
+.mensaje-resultado {
+  font-size: 1.5rem;
+  font-weight: 500; /* Negrita media */
+  margin-bottom: 1.5rem;
+  min-height: 2.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: var(--transition);
+}
+
+/* Estilos del panel de estadísticas de las partidas */
+
+.estadisticas-juego {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.8rem;
+}
+
+.panel-estadistica {
+  background: var(--darker-bg);
+  padding: 1.2rem 0.8rem;
+  border-radius: var(--border-radius);
+  text-align: center;
+}
+
+.valor-estadistica {
+  display: block; /* Hace que un elemento se comporte como un elemento de bloque */
+  font-size: 1.5rem;
+  font-weight: bold;
+  font-family: "Orbitron", sans-serif;
+  color: var(--primary-color);
+  margin-bottom: 0.3rem;
+}
+
+.etiqueta-estadistica {
+  color: var(--text-dim);
+  font-size: 0.8rem;
+  text-transform: uppercase; /* Convierte todo el texto a mayúsculas visualmente */
+  letter-spacing: 1px; /* Separación horizontal entre letras */
+}
+
+/******************************************************/
+/* Estilos para los posibles resultados de la partida */
+/******************************************************/
+
+/* Estilo para cuando el jugador gana la partida */
+.ganador {
+  color: var(--success);
+  text-shadow: 0 0 10px rgba(78, 205, 196, 0.5);
+  animation: celebrate 0.6s ease-in-out; /* Defino el efecto celebrate, cada 0,6 segundos con un final suavizado */
+}
+
+/* Estilo para cuando el jugador pierde la partida */
+.perdedor {
+  color: var(--danger);
+  text-shadow: 0 0 10px rgba(255, 107, 107, 0.5);
+}
+
+/* Estilo para cuando el jugador empata con la CPU */
+.empate {
+  color: var(--warning);
+  text-shadow: 0 0 10px rgba(255, 209, 102, 0.5);
+}
+
+/*******************************************************************************************/
+/* Estilos para el panel de los botones de reiniciar juego y mostrar las reglas (Opcional) */
+/*******************************************************************************************/
+
+/* Contenedor de botones dentro del panel de abajo */
+.contenedor-botones-opcional {
+  display: flex;
+  flex-direction: column; /* Por defecto, columna para móviles */
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  width: 100%;
+  height: 100%;
+  max-width: 700px;
+}
+
+/* Botones secundarios para reset y reglas */
+.boton-secundario {
+  background: linear-gradient(135deg, var(--darker-bg), var(--card-bg));
+  border: 2px solid transparent;
+  border-radius: var(--border-radius);
+  padding: 1rem 1.2rem;
+  color: var(--text-light);
+  cursor: pointer;
+  transition: var(--transition);
+  font-family: "Roboto", sans-serif;
+  font-size: 0.9rem;
+  min-width: 150px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* Efectos al pasar el ratón */
+.boton-secundario:hover {
+  transform: translateY(-2px);
+  border-color: var(--primary-color);
+  box-shadow: 0 8px 20px rgba(108, 99, 255, 0.3);
+}
+
+/*******************************************************************/
+/* Estilos para mostrar las jugadas que reliza el jugador y la CPU */
+/*******************************************************************/
+
+/* Este estilo hace que la jugada se vea más grande (Se aplica desde JS en la función mostrarEleccion) */
+.icono-jugada-grande {
+  font-size: 4rem;
+  animation: popIn 0.5s cubic-bezier(0.4, 0, 0.2, 1); /* Defino un efecto popIn */
+}
+
+/* Estilo para el texto que muestra la jugada del jugador y de la CPU (Se aplica desde JS en la función mostrarEleccion) */
+.texto-jugada {
+  margin-top: 0.5rem;
+  font-size: 1rem;
+  font-weight: 500; /* Negrita media */
+  color: var(--text-light);
+}
+
+/***********************/
+/* Efectos para el CSS */
+/***********************/
+
+/* Efecto "pulse": crea una ligera expansión y contracción para simular una pulsación */
+@keyframes pulse {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+}
+
+/* Efecto "popIn": hace que el elemento aparezca con un pequeño zoom y aumento de opacidad */
+@keyframes popIn {
+  0% {
+    transform: scale(0);
+    opacity: 0;
+  }
+  70% {
+    transform: scale(1.2);
+    opacity: 0.7;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+/* Efecto "celebrate": genera un movimiento energético con pequeños giros simulando celebración */
+@keyframes celebrate {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  25% {
+    transform: scale(1.1) rotate(-5deg);
+  }
+  50% {
+    transform: scale(1.1) rotate(5deg);
+  }
+  75% {
+    transform: scale(1.1) rotate(-5deg);
+  }
+}
+
+/*********************/
+/* Diseño Responsive */
+/*********************/
+
+/* Ajustes para pantallas medianas: reorganiza paneles en una sola columna y reduce tamaños */
+@media (max-width: 968px) {
+  .top-panels {
+    grid-template-columns: 1fr;
+    gap: 1.2rem;
+    max-width: 500px;
+  }
+
+  .selection-section,
+  .panel-batalla {
+    margin: 0 auto;
+  }
+
+  .title {
+    font-size: 1.8rem;
+  }
+}
+
+/* Ajustes para pantallas pequeñas: optimiza espaciados, tamaños y cambia disposición de varios elementos */
+@media (max-width: 768px) {
+  .container {
+    width: 95%;
+    padding: 0.5rem;
+  }
+
+  body {
+    justify-content: flex-start;
+    padding: 1rem 0;
+    height: auto;
+    min-height: 100vh;
+  }
+
+  .title {
+    font-size: 1.6rem;
+  }
+
+  .top-panels {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .choices-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .boton-eleccion-jugada {
+    min-height: 90px;
+    padding: 1rem 0.5rem;
+  }
+
+  .icono-jugada {
+    font-size: 1.8rem;
+  }
+
+  .contenedor-jugadores {
+    flex-direction: column;
+    gap: 0.8rem;
+  }
+
+  .vs-circle {
+    order: -1;
+    margin: 0.5rem 0;
+  }
+
+  .estadisticas-juego {
+    grid-template-columns: 1fr;
+  }
+
+  .mensaje-resultado {
+    font-size: 1.3rem;
+  }
+}
+
+/* Ajustes para pantallas muy pequeñas: reduce aún más tamaños y reorganiza la cuadrícula */
+@media (max-width: 480px) {
+  .choices-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .title {
+    font-size: 1.4rem;
+  }
+
+  .subtitle {
+    font-size: 0.9rem;
+  }
+
+  .icono-jugada {
+    font-size: 1.6rem;
+  }
+
+  .icono-jugada-large {
+    font-size: 2.5rem;
+  }
+
+  .mostrar-jugada {
+    min-height: 100px;
+    padding: 1rem;
+  }
+
+  .mensaje-resultado {
+    font-size: 1.2rem;
+  }
+
+  .valor-estadistica {
+    font-size: 1.3rem;
+  }
+}
